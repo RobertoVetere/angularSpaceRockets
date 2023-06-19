@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cursoAngular_1": {
+    "curso_angular-1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cursoAngular_1:build:production"
+              "browserTarget": "curso_angular-1:build:production"
             },
             "development": {
-              "browserTarget": "cursoAngular_1:build:development"
+              "browserTarget": "curso_angular-1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cursoAngular_1:build"
+            "browserTarget": "curso_angular-1:build"
           }
         },
         "test": {
@@ -91,6 +91,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
