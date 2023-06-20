@@ -1,10 +1,25 @@
-<div class="wrapper">
-  <div class="gallery">
-    <div class="item" *ngFor="let item of data">
-      <h1>{{ item.name }}</h1>
-      <p>{{ item.description }}</p>
-      <div class="imgs"> 
-        <img [src]="img" alt="" *ngFor="let img of item.flickr_images">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 col-lg-2">
+      <div class="wrapper">
+        <p>hola</p>
+      </div>
+    </div>
+    <div class="col-md-10 col-lg-10">
+      <div class="wrapper">
+        <div class="gallery">
+          <div class="item row" *ngFor="let item of data">
+            <h1>{{ item.name }}</h1>
+            <p>{{ item.description }}</p>
+            <p>Diameter (meters): {{ item.diameter.meters }}</p>
+            <div class="carousel">
+              <div class="slide imgs col-md-12 col-sm-12">
+                <img [src]="img" alt="" *ngFor="let img of item.flickr_images" class="img-fluid col-md-12 col-sm-12">
+              </div>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
